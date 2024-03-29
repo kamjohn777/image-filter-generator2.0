@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./CSS/styles.css">
+    <link rel="stylesheet" href="./CSS/image-upload.css">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="main_conatainer">
+        <div class="left-conatiner">
+          <div class="top-container">
+            <!-- array of images -->
+            <ul>
+                <li>test top</li>
+                <li>test top</li>
+                <li>test top</li>
+                <li>test top</li>
+                <li>test top</li>
+                <li>test top</li>
+                <li>test top</li>
+                <li>test top</li>
+                <li>test top</li>
+                <li>test top</li>
+            </ul>
+          </div>
+  
+          <div class="image-box">
+            <!-- test -->
+            <div class="container center">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="white">Custom File Upload</h1>
+                        <p class="white">In this example, submit is allowed only in case the user uploads a valid image file.</p>
+                    </div>
+                </div>
+                
+                <form name="upload" method="post" action="#" enctype="multipart/form-data" accept-charset="utf-8">
+                    <div class="row">
+                        <div class="col-md-6 col-md-offset-3 center">
+                            <div class="btn-container">
+                                <!--the three icons: default, ok file (img), error file (not an img)-->
+                                <h1 class="imgupload"><i class="fa fa-file-image-o"></i></h1>
+                                <h1 class="imgupload ok"><i class="fa fa-check"></i></h1>
+                                <h1 class="imgupload stop"><i class="fa fa-times"></i></h1>
+                                <!--this field changes dinamically displaying the filename we are trying to upload-->
+                                <p id="namefile">Only pics allowed! (jpg,jpeg,bmp,png)</p>
+                                <!--our custom btn which which stays under the actual one-->
+
+                                <!-- <button type="button" id="btnup" class="btn btn-primary btn-lg">Browse for your pic!</button> -->
+
+                                <input type="file" name="imageUpload" accept="image/*" id="btnup" class="btn btn-primary btn-lg">
+                                <!--this is the actual file input, is set with opacity=0 beacause we wanna see our custom one-->
+                                <input type="file" value="" name="fileup" id="fileup">
+                            </div>
+                        </div>
+                    </div>
+                        <!--additional fields-->
+                    <div class="row">			
+                        <div class="col-md-12">
+                            <!--the defauld disabled btn and the actual one shown only if the three fields are valid-->
+                            <input type="submit" value="Submit!" class="btn btn-primary" id="submitbtn">
+                            <button type="button" class="btn btn-default" disabled="disabled" id="fakebtn">Submit! <i class="fa fa-minus-circle"></i></button>
+                        </div>
+                    </div>
+                </form>
+
+                <div class="result">
+                    <img src="./assets/pexels-alex-montes-1820563.jpg" alt="" id="image">
+                    <img id="imagePreview" src="#" alt="Image Preview" /> <!-- New image tag -->
+                    <div class="output">example
+                    </div>
+                </div>
+            </div>
+            
+            <a href="http://www.emilianocostanzo.com" target="_blank" id="sign">EMI</a>
+          </div>
+        </div>
+
+        <!-- Right Container -->
+        <div class="right-container">
+            <div class="container">
+
+                <div class="filter">
+                    <div class="input-box">
+                        <span>Grayscale</span>
+                        <input type="range" min="0" max="100" value="0" name="grayscale" id="grayscale">
+                    </div>
+        
+                    <div class="input-box">
+                        <span>sepia</span>
+                        <input type="range" min="0" max="100" value="0" name="sepia" id="sepia">
+                    </div>
+        
+        
+                    <div class="input-box">
+                        <span>blur</span>
+                        <input type="range" min="0" max="10" value="0" name="blur" id="blur">
+                    </div>
+        
+                    <div class="input-box">
+                        <span>brightness</span>
+                        <input type="range" min="0" max="1000" value="100" name="brightness" id="brightness">
+                    </div>
+        
+                    <div class="input-box">
+                        <span>contrast</span>
+                        <input type="range" min="0" max="1000" value="100" name="contrast" id="contrast">
+                    </div>
+        
+                    <div class="input-box">
+                        <span>hue-rotate</span>
+                        <input type="range" min="0" max="360" value="0" name="hue-rotate" id="hue-rotate">
+                    </div>
+        
+                    <div class="input-box">
+                        <span>saturated</span>
+                        <input type="range" min="0" max="1000" value="100" name="saturate" id="saturate">
+                    </div>
+        
+                    <div class="input-box">
+                        <span>invert</span>
+                        <input type="range" min="0" max="100" value="0" name="invert" id="invert">
+                    </div>
+        
+                    <div class="input-box">
+                        <span>opacity</span>
+                        <input type="range" min="0" max="100" value="100" name="opacity" id="opacity">
+                    </div>
+                </div>
+        
+                <div class="result">
+                    <img src="./assets/pexels-alex-montes-1820563.jpg" alt="" id="image">
+            
+                    <div class="output">example
+                        
+                    </div>
+                </div>
+        
+        
+                <!-- test -->
+                <input type="file" id="imageUpload">
+                <!-- end of test -->
+            </div>
+        
+        </div>
+      </div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="jquery.fileupload.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+    <script src="./JavaScript/image-upload.js"></script>
+    <script src="./JavaScript/main.js"></script>
+    <script src="./jQuery-File-Upload-master/js/jquery.fileupload-image.js"></script>
+  </body>
+</html>

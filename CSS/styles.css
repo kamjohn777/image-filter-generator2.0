@@ -1,0 +1,13 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main_conatainer {
+  display: flex;
+  height: 100vh;
+  background: purple;
+  /* height: 100%;
+  width: 100%; */
+}
