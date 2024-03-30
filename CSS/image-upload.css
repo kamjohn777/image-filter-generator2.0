@@ -1,10 +1,12 @@
 /* test */
 /*just bg and body style*/
 .container{
-    background-color:#1E2832;
+    /* background-color:#1E2832; */
+    background-color: transparent;
     padding-bottom:20px;
     margin-top:10px;
     border-radius:5px;
+    height: 500px;
     }
     .center{
     text-align:center;  
@@ -37,7 +39,7 @@
     color: #ffffff;
     text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
     background-color: #ff3f3f !important;
-    border-color: #ff3f3f !important;
+    border-color: #9229fc !important;
     }
     
     /*these two are set to not display at start*/
@@ -89,13 +91,63 @@
         text-shadow:0px 0px 5px #1E2832;
     }
 
-    .container .center {
+    #image-upload-container {
         width: 1050px;
-        height: 520px;
+        /* height: 520px; */
+        height: fit-content;
+        background: transparent;
     }
 
     dl, ol, ul {
         margin-top: 0;
         margin-bottom: 1rem;
+        /* display: flex;
+        gap: 5px;
+        width: 100%;
+    justify-content: space-around;
+    list-style: none; */
+
+
+    display: flex;
+    gap: 0px;
+    width: 95%;
+    list-style: none;
+    justify-content: space-around;
+    }
+
+    .top-container {
+        /* height: 100px; */
+        height: 130px;
+        width: 100%;
+        background: #333;
         display: flex;
+        justify-content: center;
+    }
+    
+    .result {
+        display: none;
+    }
+
+
+
+
+    #imagePreview {
+        height: 650px;
+        width: 650px;
+        object-fit: cover; 
+    }
+
+
+    .upload-img-box {
+        width: 1030px;
+        height: 700px;
+        border: dotted 3px grey;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .upload-img-box img {
+       height: 100px;
     }
